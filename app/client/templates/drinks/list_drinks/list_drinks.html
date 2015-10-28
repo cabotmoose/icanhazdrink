@@ -1,0 +1,31 @@
+<template name="ListDrinks">
+  <h1>Drinks List</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Tagline</th>
+        <th>Ingredients</th>
+        <th>Process</th>
+        <th>Glass</th>
+        <th>Garnish</th>
+        <th>Ice</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each drinks}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{tagline}}</td>
+          <td>{{ingredient}}</td>
+          <td>{{process}}</td>
+          <td>{{glass}}</td>
+          <td>{{garnish}}</td>
+          <td>{{ice}}</td>
+          <td>{{#linkTo route='editDrink'}}<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{{/linkTo}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>
